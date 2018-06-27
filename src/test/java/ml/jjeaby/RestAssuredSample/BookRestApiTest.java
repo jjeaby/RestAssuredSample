@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import io.restassured.RestAssured;
 import ml.jjeaby.RestAssuredSample.Application;
 import ml.jjeaby.RestAssuredSample.Book;
-import wiremock.org.eclipse.jetty.http.HttpStatus;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.equalTo;
@@ -65,7 +64,7 @@ public class BookRestApiTest {
 		          			.body("publisher", is("ACT 출판사"))
 		          			.body("status", is("instock"))
 		          			
-							.statusCode(HttpStatus.OK_200)
+							.statusCode(200)
 				  .extract().response();
 
  

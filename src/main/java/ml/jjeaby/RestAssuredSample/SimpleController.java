@@ -22,7 +22,7 @@ public class SimpleController {
 		return "안녕 Spring Boot!";
 	}
 
-	@GetMapping("/info/{bookTitle}")
+	@GetMapping("/rest/info/{bookTitle}")
 	public Book findByTitle(@PathVariable String bookTitle) {
 		Book book = new Book();
 
@@ -33,7 +33,7 @@ public class SimpleController {
 		return book;
 	}
 
-	@PostMapping("/add")
+	@PostMapping("/rest/add")
 	public Book sayHello(@RequestBody Book book) {
 		book.setStatus("added");
 		return book;
