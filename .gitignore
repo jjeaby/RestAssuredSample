@@ -2,3 +2,7 @@ target
 **/util/*
 .settings
 .project
+build
+.gradle
+.idea
+*.iml
