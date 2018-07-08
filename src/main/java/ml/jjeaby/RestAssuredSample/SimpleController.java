@@ -19,7 +19,7 @@ public class SimpleController {
 
 	@RequestMapping("/")
 	public String home() {
-		return "안녕 Spring Boot!";
+		return "Hello Spring Boot! This is Index Page";
 	}
 
 	@GetMapping("/rest/info/{bookTitle}")

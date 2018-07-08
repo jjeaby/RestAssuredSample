@@ -5,15 +5,14 @@ version = "RestAssuredSample"
 buildscript {
     repositories {
         mavenCentral()
-//        maven { url "http://repo.spring.io/libs-snapshot" }
-//        mavenLocal()
     }
     dependencies {
-//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC1")
         classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '2.0.1.RELEASE'
 
     }
 }
+
+
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
@@ -36,7 +35,6 @@ test {
 
 repositories {
     mavenCentral()
-    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
