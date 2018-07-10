@@ -27,13 +27,13 @@ public class BookRestApiTest {
     public void testIndex() {
 
 
-        RestAssured.
-                given().
-                when().
-                    get("/").
-                then().
-                    assertThat().
-                    statusCode(200);
+//        RestAssured.
+//                given().
+//
+//                when().
+//
+//                then().
+
     }
 
     @Test
@@ -44,20 +44,12 @@ public class BookRestApiTest {
         book.setPublisher("ACT 출판사");
         book.setStatus("instock");
 
-        RestAssured
-                .given()
-                    .pathParam("BookTitle", book.getTitle())
-                    .log().all()
-                .when()
-                    .get("/rest/info/{BookTitle}")
-                .then()
-                    .log().all()
-                    .body("title", is("REST API TEST"))
-                    .body("writer", is("Jin"))
-                    .body("publisher", is("ACT 출판사"))
-                    .body("status", is("instock"))
-                    .statusCode(200)
-                    .extract().response();
+//        RestAssured
+//                .given()
+//
+//                .when()
+//
+//                .then()
 
 
     }

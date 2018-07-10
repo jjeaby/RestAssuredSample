@@ -57,14 +57,24 @@ public class AFirstWireMockTest {
 
 		setupStub();
 
-		RestAssured.given().when().get("/an/endpoint").then().assertThat().statusCode(200);
+		RestAssured
+				.given()
+				.when()
+					.get("/an/endpoint")
+				.then()
+					.assertThat()
+					.statusCode(200);
 	}
 
 	@Test
 	public void testStatusCodeNegative() {
 
 		setupStub();
-		RestAssured.given().when().get("/another/endpoint").then().assertThat().statusCode(401);
+//		RestAssured
+//				.given()
+//				.when()
+//
+//				.then()
 	}
 
 	@Test
@@ -81,8 +91,20 @@ public class AFirstWireMockTest {
 	public void setupStub() {
 
 		stubFor(get(urlEqualTo("/an/endpoint"))
-				.willReturn(aResponse().withHeader("Content-Type", "text/plain").withStatus(200).withBody(bodyText)));
+				.willReturn(
+						aResponse()
+								.withHeader("Content-Type", "text/plain")
+								.withStatus(200)
+								.withBody(bodyText)
+							)
+		);
 
-		stubFor(get(urlEqualTo("/another/endpoint")).willReturn(aResponse().withStatus(401)));
+		stubFor(
+				get(urlEqualTo("/another/endpoint"))
+				.willReturn(
+							aResponse()
+									.withStatus(401)
+							)
+		);
 	}
 }
