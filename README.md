@@ -1,16 +1,13 @@
-<h1>
-Rest Api Template Projct(Rest Assured)
-</h1>
-<h4>
-Rest API 테스트 자동화 Template Proect 입니다.(Rest Assured)
-</h4>
+#Rest Api Template Projct(Rest Assured)
+##Rest API 테스트 자동화 Template Project 입니다.(Rest Assured + wiremock)
 
 
-<br><Br><br>
-<h2>
-1. API Test Run
-</h2>
+####1. spring boot run
+* mvn spring-boot:run
+* gradle bootrun
+####2. API Test Run
 
-mvn test 
+* gradle test 
+* mvn test 
  
 

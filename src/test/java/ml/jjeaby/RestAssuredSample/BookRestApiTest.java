@@ -30,10 +30,10 @@ public class BookRestApiTest {
         RestAssured.
                 given().
                 when().
-                get("/").
+                    get("/").
                 then().
-                assertThat().
-                statusCode(200);
+                    assertThat().
+                    statusCode(200);
     }
 
     @Test

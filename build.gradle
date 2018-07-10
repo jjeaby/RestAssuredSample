@@ -5,6 +5,9 @@ version = "RestAssuredSample"
 buildscript {
     repositories {
         mavenCentral()
+//        maven {
+//            url "http://repo.mycompany.com/maven2"
+//        }
     }
     dependencies {
         classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '2.0.1.RELEASE'
@@ -35,6 +38,10 @@ test {
 
 repositories {
     mavenCentral()
+//        maven {
+//            url "http://repo.mycompany.com/maven2"
+//        }
+
 }
 
 dependencies {
